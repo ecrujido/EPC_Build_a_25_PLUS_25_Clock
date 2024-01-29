@@ -122,7 +122,7 @@ function App() {
             Break
           </h2>
           <button
-            className="btn btn-info col more"
+            className="btn col more"
             id="break-increment"
             onClick={() => handleIncrementDecrement("break", 1)}
           >
@@ -145,7 +145,7 @@ function App() {
             Session
           </h2>
           <button
-            className="btn btn-sm col more"
+            className="btn col more"
             id="session-increment"
             onClick={() => handleIncrementDecrement("session", 1)}
           >
@@ -155,7 +155,7 @@ function App() {
             {sessionLength}
           </h2>
           <button
-            className="btn btn-sm col less"
+            className="btn col less"
             id="session-decrement"
             onClick={() => handleIncrementDecrement("session", -1)}
           >
