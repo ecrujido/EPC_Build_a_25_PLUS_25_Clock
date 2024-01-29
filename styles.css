@@ -1,36 +1,41 @@
 :root {
-  --background-color: #ebd8d0;
-  --text-color: #da627d;
-  --footer-color: #df94a3;
-  --box-color: #eac9c1;
-  --more-color: #f28686;
-  --less-color: #e8718d;
+  --background-color: #e6fff7;
+  --text-color: black;
+  --footer-color: black;
+  --box-color: #99ffdd;
+  --more-color: #66ffcc;
+  --less-color: #80ffd4;
 }
 
+
 .dark-mode {
-  --background-color: #120f16;
-  --text-color: #a04574;
-  --box-color: #612940;
-  --more-color: #4b2347;
-  --less-color: #331d33;
+  --background-color: #000080;
+  --text-color: #808080;
+  --box-color: #0000b3;
+  --more-color: #00004d;
+  --less-color: #000066;
 }
+
 
 body {
   background-color: var(--background-color);
   color: var(--text-color);
 }
+
+
 .title {
   background-color: var(--box-color);
   border: 2px solid;
   border-radius: 2rem;
   font-size: 3rem;
   font-weight: bold;
-  text-shadow: 2px 2px 1px var(--background-color);
 }
+
 
 .drkmdbtn {
   color: var(--text-color);
 }
+
 
 .drkmdbtn:hover {
   color: var(--footer-color);
@@ -38,18 +43,22 @@ body {
 
 .more,
 .less {
-  color: #ebd8d0;
+  /* color: #ebd8d0; */
   border-radius: 2rem;
   border: 2px solid;
   border-color: var(--text-color);
 }
 
+
 .less {
   background-color: var(--less-color);
 }
+
+
 .more {
   background-color: var(--more-color);
 }
+
 
 .less:hover,
 .more:hover {
@@ -57,6 +66,7 @@ body {
   border: 2px solid;
   border-color: var(--text-color);
 }
+
 
 .container {
   width: 20rem;
@@ -98,12 +108,4 @@ body {
   align-items: center;
   margin-bottom: -5px;
   font-weight: bold;
-}
-.nana {
-  text-decoration: none;
-  color: var(--footer-color);
-  font-style: italic;
-}
-.nana:hover {
-  color: var(--text-color);
 }

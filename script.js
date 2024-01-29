@@ -15,13 +15,11 @@ function App() {
   const [audio, setAudio] = useState("https://cdn.freecodecamp.org/testable-projects-fcc/audio/BeepSound.wav");
 
 
-  // Toggle between light/dark mode, updating the HTML document accordingly
   const toggleDarkMode = () => {
     setDarkMode(!darkMode);
   };
 
 
-  //  Effect hook that updates the class on the HTML document element based on the darkMode state.
   useEffect(() => {
     document.documentElement.classList.toggle("dark-mode", darkMode);
     },
@@ -35,7 +33,6 @@ function App() {
   };
   
 
-   //  Handles incrementing/decrementing the break/session length based on the type and amount provided.
   const handleIncrementDecrement = (type, amount) => {
 
     const isValidLength = (length) => length > 1 && length < 60;
@@ -58,14 +55,12 @@ function App() {
       setTimerOn(false);
     } else if (!timerOn) {
       let interval = setInterval(() => {
-
         setDisplayTime((prev) => {
           if (prev === 0 && !breakOnVar) {
             playAudio();
             breakOnVar = true;
             setBreakOn(true);
             return breakLength * 60;
-
           } else if (prev === 0 && breakOnVar) {
             playAudio();
             breakOnVar = false;
@@ -81,7 +76,7 @@ function App() {
     }
   };
 
-
+ 
   const reset = () => {
     setBreakLength(5);
     setSessionLength(25);
@@ -103,18 +98,14 @@ function App() {
   };
 
 
-  const getTimerClassName = () => {
-    if (displayTime < 60) {
-      return "timedisplay-flash";
-    }
-    return "";
-  };
+
+  const getTimerClassName = () => (displayTime < 60) ? "timedisplay-flash" : "";
 
 
   return (
     <div className="timer">
       <h1 className="text-center m-5 title">
-        Pomodoro Clock
+        25 plus 5 Clock
         <button
           className="btn btn-lg float-end p-3 drkmdbtn"
           onClick={toggleDarkMode}
@@ -188,17 +179,19 @@ function App() {
               {timeFormat(displayTime)}
             </h1>
           </div>
-          <button className="btn less" id="start_stop" onClick={startTimer}>
-            {timerOn ? (
-              <i className="fa-solid fa-pause"></i>
-            ) : (
-              <i className="fa-solid fa-play"></i>
-            )}
-          </button>
-          <button className="btn more" id="reset" onClick={reset}>
-            <i class="fa-solid fa-rotate"></i>
-          </button>
-        </div>
+            <button className="btn less" id="start_stop" onClick={startTimer}>
+              {timerOn ? (
+                // <i className=" fa-solid fa-pause"></i>
+                <i class="fa-solid fa-pause"></i>
+              ) : (
+                // <i className=" fa-solid fa-play "></i>
+                <i class="fa-solid fa-play"></i>
+              )}
+            </button>
+            <button className="btn more" id="reset" onClick={reset}>
+              <i class=" fa-solid fa-rotate"></i>
+            </button>
+          </div>
       </div>
       <div className="footer p-5">
         25 + 5 Clock (c) 2024
