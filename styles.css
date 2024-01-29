@@ -14,6 +14,7 @@
   --box-color: #0000b3;
   --more-color: #00004d;
   --less-color: #000066;
+  --footer-color: #808080;
 }
 
 
@@ -43,7 +44,7 @@ body {
 
 .more,
 .less {
-  /* color: #ebd8d0; */
+  color: black;
   border-radius: 2rem;
   border: 2px solid;
   border-color: var(--text-color);

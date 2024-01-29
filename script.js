@@ -105,7 +105,7 @@ function App() {
   return (
     <div className="timer">
       <h1 className="text-center m-5 title">
-        25 plus 5 Clock
+        25 + 5 Clock
         <button
           className="btn btn-lg float-end p-3 drkmdbtn"
           onClick={toggleDarkMode}
@@ -127,7 +127,7 @@ function App() {
             id="break-increment"
             onClick={() => handleIncrementDecrement("break", 1)}
           >
-            <i class="fa-solid fa-caret-up"></i>
+            <i class="fa-solid fa-angles-up"></i>
           </button>
           <h2 className="col text-center" id="break-length">
             {breakLength}
@@ -137,7 +137,7 @@ function App() {
             id="break-decrement"
             onClick={() => handleIncrementDecrement("break", -1)}
           >
-            <i class="fa-solid fa-caret-down"></i>
+            <i class="fa-solid fa-angles-down"></i>
           </button>
         </div>
 
@@ -150,7 +150,7 @@ function App() {
             id="session-increment"
             onClick={() => handleIncrementDecrement("session", 1)}
           >
-          <i class="fa-solid fa-caret-up"></i>
+          <i class="fa-solid fa-angles-up"></i>
           </button>
           <h2 className="col text-center" id="session-length">
             {sessionLength}
@@ -160,13 +160,13 @@ function App() {
             id="session-decrement"
             onClick={() => handleIncrementDecrement("session", -1)}
           >
-            <i class="fa-solid fa-caret-down"></i>
+            <i class="fa-solid fa-angles-down"></i>
           </button>
         </div>
       </div>
 
       <div className="pt-5 d-flex max-vh-100 max-vw-100 justify-content-center">
-        <div className="container mt-5">
+        <div className="container mt-3">
           <h2 className="mt-2" id="timer-label">
             {breakOn ? "Break" : "Session"}
           </h2>
@@ -193,7 +193,7 @@ function App() {
             </button>
           </div>
       </div>
-      <div className="footer p-5">
+      <div className="footer mt-5">
         25 + 5 Clock (c) 2024
       </div>
     </div>
