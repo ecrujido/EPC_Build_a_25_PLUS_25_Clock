@@ -1,4 +1,3 @@
-// Import necessary React and ReactDOM hooks and libraries
 const { useState, useEffect, useRef } = React;
 const { render } = ReactDOM;
 
